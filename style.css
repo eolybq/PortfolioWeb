@@ -1,0 +1,258 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 18px;
+  background: linear-gradient(120deg, #e3f2fd 0%, #f9f9f9 100%);
+  color: #222;
+  /* Fade-in animace celé stránky */
+  animation: fadeInBody 1.2s cubic-bezier(.77,0,.18,1) 1;
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 36px 0 18px 0;
+  background: #1769aa;
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgb(23 105 170 / 0.08);
+  /* Slide-down animace */
+  animation: slideDown 1s cubic-bezier(.77,0,.18,1) 0.2s both;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+section {
+  margin-bottom: 44px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgb(23 105 170 / 0.06);
+  padding: 28px 24px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.9s cubic-bezier(.77,0,.18,1) forwards;
+}
+
+section:nth-of-type(1) { animation-delay: 0.5s; }
+section:nth-of-type(2) { animation-delay: 0.7s; }
+section:nth-of-type(3) { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  border-bottom: 2px solid #1769aa;
+  padding-bottom: 8px;
+  margin-bottom: 22px;
+  color: #1769aa;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.project {
+  background: #f5faff;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgb(23 105 170 / 0.07);
+  transition: box-shadow 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  animation: fadeProject 0.7s cubic-bezier(.77,0,.18,1) forwards;
+}
+
+.project:nth-child(1) { animation-delay: 1.1s; }
+.project:nth-child(2) { animation-delay: 1.25s; }
+.project:nth-child(3) { animation-delay: 1.4s; }
+
+@keyframes fadeProject {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.project:hover {
+  box-shadow: 0 10px 32px rgb(23 105 170 / 0.18);
+  transform: translateY(-4px) scale(1.025);
+}
+
+.project h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #0a2239;
+  transition: color 0.2s;
+}
+
+.project:hover h3 {
+  color: #1769aa;
+}
+
+.project p {
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+.project a {
+  color: #1769aa;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s, text-decoration 0.2s;
+  position: relative;
+}
+
+.project a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #1769aa;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+
+.project a:hover {
+  color: #0a2239;
+  text-decoration: none;
+}
+
+.project a:hover::after {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+  margin-top: 70px;
+  padding-bottom: 36px;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  animation: fadeInFooter 1s 1.7s forwards;
+}
+
+@keyframes fadeInFooter {
+  to { opacity: 1; }
+}
+
+nav {
+  background: #0a2239;
+  border-radius: 16px;
+  margin-bottom: 36px;
+  box-shadow: 0 4px 16px rgb(10 34 57 / 0.08);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeInNav 0.8s 0.1s forwards;
+}
+
+@keyframes fadeInNav {
+  to { opacity: 1; }
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.12rem;
+  letter-spacing: 0.5px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+}
+
+nav a:hover, nav a:focus {
+  background: #1769aa;
+  color: #fff;
+  transform: translateY(-2px) scale(1.05);
+}
+
+nav a:hover::after, nav a:focus::after {
+  width: 100%;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background: linear-gradient(90deg, #e3f2fd 60%, #bbdefb 100%);
+  color: #1769aa;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  box-shadow: 0 1px 4px rgb(23 105 170 / 0.08);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeSkill 0.7s cubic-bezier(.77,0,.18,1) forwards;
+}
+
+.skills-list li:nth-child(1) { animation-delay: 0.8s; }
+.skills-list li:nth-child(2) { animation-delay: 0.9s; }
+.skills-list li:nth-child(3) { animation-delay: 1s; }
+.skills-list li:nth-child(4) { animation-delay: 1.1s; }
+.skills-list li:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes fadeSkill {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.skills-list li:hover {
+  background: #1769aa;
+  color: #fff;
+  transform: scale(1.07) rotate(-2deg);
+}
