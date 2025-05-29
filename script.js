@@ -50,7 +50,7 @@ const filterOptions = [
   "Machine Learning"
 ];
 
-const projectsSection = document.getElementById('projects');
+// const projectsSection = document.getElementById('projects');
 
 // Vytvoření filtru
 const filterDiv = document.createElement('div');
