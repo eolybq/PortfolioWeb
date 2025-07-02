@@ -16,6 +16,11 @@ const projects = [
     url: "https://github.com/tvujgithub/tsla_pred"
   },
   {
+    title: "Predikce cen akcií podniků v simulované kolektivní VŠ hře",
+    description: "Projekt zaměřený na predikci cen akcií v simulované kolektivní hře mezi studenty VŠ.",
+    url: "https:P//github.com/tvujgithub/manahra_scraping_prediction"
+  },
+  {
     title: "Analýza dat o cenách akcií TSLA",
     description: "Projekt využívající ARIMA a VAR modely pro predikci vývoje ceny akcií Tesla s využitím sentimentu z Twitteru.",
     url: "https://github.com/tvujgithub/tsla-analysis"
