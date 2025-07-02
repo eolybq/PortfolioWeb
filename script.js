@@ -6,6 +6,16 @@ const projects = [
     url: "https://github.com/tvujgithub/portfolio"
   },
   {
+    title: "Netradiční data, tradiční modely",
+    description: "Projekt zaměřený na analýzu netradičních dat pomocí tradičních statistických modelů časových řad.",
+    url: "https://github.com/tvujgithub/tsla_pred"
+  },
+  {
+    title: "Netradiční data, netradiční modely",
+    description: "Projekt zaměřený na analýzu netradičních dat pomocí netradičních modelů, jako jsou neuronové sítě.",
+    url: "https://github.com/tvujgithub/tsla_pred"
+  },
+  {
     title: "Analýza dat o cenách akcií TSLA",
     description: "Projekt využívající ARIMA a VAR modely pro predikci vývoje ceny akcií Tesla s využitím sentimentu z Twitteru.",
     url: "https://github.com/tvujgithub/tsla-analysis"
