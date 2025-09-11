@@ -30,32 +30,32 @@ const projects = [
     description: "Model založený na TensorFlow pro rozpoznání objektů ve fotografiích.",
     url: "https://github.com/tvujgithub/image-classifier"
   }
-];
+]
 
-const projectsSection = document.getElementById('projects');
+const projectsSection = document.getElementById('projects')
 
 projects.forEach(proj => {
-  const div = document.createElement('div');
-  div.className = 'project';
+  const div = document.createElement('div')
+  div.className = 'project'
 
-  const h3 = document.createElement('h3');
-  h3.textContent = proj.title;
+  const h3 = document.createElement('h3')
+  h3.textContent = proj.title
 
-  const p = document.createElement('p');
-  p.textContent = proj.description;
+  const p = document.createElement('p')
+  p.textContent = proj.description
 
-  const a = document.createElement('a');
-  a.href = proj.url;
-  a.textContent = 'GitHub Repo';
-  a.target = '_blank';
-  a.rel = 'noopener noreferrer';
+  const a = document.createElement('a')
+  a.href = proj.url
+  a.textContent = 'GitHub Repo'
+  a.target = '_blank'
+  a.rel = 'noopener noreferrer'
 
-  div.appendChild(h3);
-  div.appendChild(p);
-  div.appendChild(a);
+  div.appendChild(h3)
+  div.appendChild(p)
+  div.appendChild(a)
 
-  projectsSection.appendChild(div);
-});
+  projectsSection.appendChild(div)
+})
 
 
 const filterOptions = [
@@ -63,40 +63,40 @@ const filterOptions = [
   "Web",
   "Data",
   "Machine Learning"
-];
+]
 
-// const projectsSection = document.getElementById('projects');
+// const projectsSection = document.getElementById('projects')
 
 // Vytvoření filtru
-const filterDiv = document.createElement('div');
-filterDiv.className = 'project-filter';
+const filterDiv = document.createElement('div')
+filterDiv.className = 'project-filter'
 filterOptions.forEach(opt => {
-  const btn = document.createElement('button');
-  btn.textContent = opt;
-  btn.onclick = () => renderProjects(opt);
-  filterDiv.appendChild(btn);
-});
-projectsSection.appendChild(filterDiv);
+  const btn = document.createElement('button')
+  btn.textContent = opt
+  btn.onclick = () => renderProjects(opt)
+  filterDiv.appendChild(btn)
+})
+projectsSection.appendChild(filterDiv)
 
 // Modal pro detail projektu
-const modal = document.createElement('div');
-modal.className = 'modal';
-modal.innerHTML = `<div class="modal-content"><span class="close">&times;</span><div class="modal-body"></div></div>`;
-document.body.appendChild(modal);
-modal.querySelector('.close').onclick = () => modal.style.display = 'none';
+const modal = document.createElement('div')
+modal.className = 'modal'
+modal.innerHTML = `<div class="modal-content"><span class="close">&times</span><div class="modal-body"></div></div>`
+document.body.appendChild(modal)
+modal.querySelector('.close').onclick = () => modal.style.display = 'none'
 
 function showModal(project) {
   modal.querySelector('.modal-body').innerHTML = `
     <h3>${project.title}</h3>
     <p>${project.description}</p>
     <a href="${project.url}" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-  `;
-  modal.style.display = 'block';
+  `
+  modal.style.display = 'block'
 }
 
 function renderProjects(filter = "Vše") {
   // Odstranit staré projekty
-  projectsSection.querySelectorAll('.project').forEach(e => e.remove());
+  projectsSection.querySelectorAll('.project').forEach(e => e.remove())
   projects.forEach((proj, idx) => {
     // Filtrování podle typu (příkladově podle klíčových slov v title)
     if (
@@ -105,31 +105,31 @@ function renderProjects(filter = "Vše") {
       (filter === "Data" && proj.title.toLowerCase().includes("analýza")) ||
       (filter === "Machine Learning" && proj.title.toLowerCase().includes("machine"))
     ) {
-      const div = document.createElement('div');
-      div.className = 'project';
-      div.style.animationDelay = `${1.1 + idx * 0.15}s`;
+      const div = document.createElement('div')
+      div.className = 'project'
+      div.style.animationDelay = `${1.1 + idx * 0.15}s`
 
-      const h3 = document.createElement('h3');
-      h3.textContent = proj.title;
+      const h3 = document.createElement('h3')
+      h3.textContent = proj.title
 
-      const p = document.createElement('p');
-      p.textContent = proj.description;
+      const p = document.createElement('p')
+      p.textContent = proj.description
 
-      const a = document.createElement('a');
-      a.href = proj.url;
-      a.textContent = 'GitHub Repo';
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
+      const a = document.createElement('a')
+      a.href = proj.url
+      a.textContent = 'GitHub Repo'
+      a.target = '_blank'
+      a.rel = 'noopener noreferrer'
 
-      div.appendChild(h3);
-      div.appendChild(p);
-      div.appendChild(a);
+      div.appendChild(h3)
+      div.appendChild(p)
+      div.appendChild(a)
 
-      div.onclick = () => showModal(proj);
+      div.onclick = () => showModal(proj)
 
-      projectsSection.appendChild(div);
+      projectsSection.appendChild(div)
     }
-  });
+  })
 }
 
-renderProjects();
+renderProjects()
