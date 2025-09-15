@@ -18,7 +18,17 @@ const projects = [
   {
     title: "Predikce cen akcií podniků v simulované kolektivní VŠ hře",
     description: "Projekt zaměřený na predikci cen akcií v simulované kolektivní hře mezi studenty VŠ.",
-    url: "https:P//github.com/tvujgithub/manahra_scraping_prediction"
+    url: "https://github.com/tvujgithub/manahra_scraping_prediction"
+  },
+  {
+    title: "Webová aplikace pro správu kalorií a cvičení",
+    description: "Aplikace umožňující uživatelům sledovat příjem kalorií a cvičební aktivity.",
+    url: "https://github.com/tvujgithub/fitapp"
+  },
+  {
+    title: "Bakalářská práce: Analýza vlivu nekonvenčních nástrojů centrálních bank na inflační očekávání",
+    description: "Studie zkoumající dopady nekonvenčních měnových politik na inflační očekávání pomocí ekonometrických modelů časových řad.",
+    url: "https://github.com/tvujgithub/bakalarka"
   },
   {
     title: "Analýza dat o cenách akcií TSLA",
