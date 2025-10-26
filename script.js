@@ -26,7 +26,7 @@ const projects = [
   },
   {
     title: "Webová aplikace pro správu kalorií a cvičení",
-    description: "Aplikace umožňující uživatelům sledovat příjem kalorií a cvičební aktivity.",
+    description: "Aplikace umožňující uživatelům sledovat příjem kalorií a cvičební aktivity. Web je dostupný zde: https://fitapp-mo2k.onrender.com/",
     url: "https://github.com/tvujgithub/fitapp",
     type: "web"
   },
