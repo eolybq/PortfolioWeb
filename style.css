@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    /* scroll-behavior: auto; */
 }
 
 body {
@@ -38,17 +39,22 @@ header {
 #headerRow {
     display: flex;
     flex-direction: row;
-    align-items: center;  
-    gap: 30px;  
+    gap: 50px;  
+    min-height: 120px;
+    margin-left: 20px;
 }
 
 #headerColumn {
     display: flex;
     flex-direction: column;
-  margin-left: 20px;   /* odsazení od levého okraje */
-  margin-right: 20px;
+    margin-left: 20px;
 }
 
+#profilImg {
+    max-width: 20%;
+    height: auto;
+    border-radius: 20%;
+}
 
 #links {
   display: flex;
@@ -414,10 +420,4 @@ nav a:focus::after {
     font-size: 2rem;
     color: #1769aa;
     cursor: pointer;
-}
-
-#profilImg {
-    max-width: 20%;
-    height: auto;
-    border-radius: 20%;
 }
