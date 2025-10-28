@@ -1,59 +1,78 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Václav Jež - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Václav Jež - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<nav>
-  <ul>
-    <li><a href="#about">O mně</a></li>
-    <li><a href="#skills">Dovednosti</a></li>
-    <li><a href="#projects">Projekty</a></li>
-    <li><a href="mailto:tvoje@email.cz">Kontaktujte mě</a></li>
-  </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="#about">O mně</a></li>
+            <li><a href="#skills">Dovednosti</a></li>
+            <li><a href="#projects">Projekty</a></li>
+            <li><a href="mailto:tvoje@email.cz">Kontaktujte mě</a></li>
+        </ul>
+    </nav>
 
-<header>
-  <img src="assets/IMG_0151.png" id="profilImg">
-  <h1>Václav Jež</h1>
-  <p>Data Analysis | Economics | Machine Learning | Web Development</p>
-  <p>Links:</p>
-    <!-- TODO: pridat link na GH, linked-in, emal ... + ikonky tech spolecnosti vzdy pred link  -->
-</header>
+    <header>
+        <div id="headerRow">
+            <img src="assets/IMG_0151.png" id="profilImg">
+            <div id="headerColumn">
+                <h1>Václav Jež</h1>
+                <p>Data Analysis | Economics | Statistics | Web Development</p>
+                <div id="links">
+                    <p>Links:</p>
+                    <a href="https://github.com/uzivatel" target="_blank">
+                        <img src="assets/github.jpg" alt="GitHub" class="icon"> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/uzivatel" target="_blank">
+                        <img src="assets/linkedin.png" alt="LinkedIn" class="icon"> LinkedIn
+                    </a>
+                    <a href="mailto:email@domain.com">
+                        <img src="assets/email.jpg" alt="Email" class="icon"> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<section id="about">
-  <h2>O mně</h2>
-  <p>Jsem nadšený datový analytik a webový vývojář, který rád tvoří projekty zaměřené na analýzu dat, strojové učení a webové aplikace.</p>
-  <p>Kontakt: <a href="mailto:tvoje@email.cz">tvoje@email.cz</a> | <a href="https://github.com/tvujgithub" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-</section>
+    <section id="about">
+        <h2>O mně</h2>
+        <p>Jsem nadšený datový analytik a webový vývojář, který rád tvoří projekty zaměřené na analýzu dat, strojové
+            učení a webové aplikace.</p>
+        <p>Kontakt: <a href="mailto:tvoje@email.cz">tvoje@email.cz</a> | <a href="https://github.com/tvujgithub"
+                target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </section>
 
-<section id="skills">
-  <h2>Dovednosti</h2>
-  <ul class="skills-list">
-    <li>JavaScript (+ React)</li>
-    <li>Python (pandas, scikit-learn, TensorFlow)</li>
-    <li>SQL, Data Visualization</li>
-    <li>Machine Learning, Data Analysis</li>
-    <li>Statistics (+ econometrics, time series models)</li>
-    <li>R</li>
-    <li>HTML, CSS, Git</li>
-    <li>LINUX (- uživatelská znalost)</li>
-  </ul>
-</section>
+    <section id="skills">
+        <h2>Dovednosti</h2>
+        <ul class="skills-list">
+            <li>JavaScript (+ React)</li>
+            <li>Python (pandas, scikit-learn, TensorFlow)</li>
+            <li>SQL, Data Visualization</li>
+            <li>Machine Learning, Data Analysis</li>
+            <li>Statistics (+ econometrics, time series models)</li>
+            <li>R</li>
+            <li>HTML, CSS, Git</li>
+            <li>LINUX (- uživatelská znalost)</li>
+        </ul>
+    </section>
 
-<section id="projects">
-  <h2>Projekty</h2>
-  <!-- Projekty se načtou ze script.js -->
-</section>
+    <section id="projects">
+        <h2>Projekty</h2>
+        <!-- Projekty se načtou ze script.js -->
+    </section>
 
-<footer>
-  &copy; 2025 Václav Jež. Všechna práva vyhrazena.
-</footer>
+    <footer>
+        &copy; 2025 Václav Jež. Všechna práva vyhrazena.
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
