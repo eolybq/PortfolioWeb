@@ -58,7 +58,7 @@ const projects = [
     },
     {
         title: "Webová stránka pro portfolio",
-        description: "Stránka na které se právě nacházíte! :). Jednoduchá statická stránka s deployment na GitHub Pages pro prezentaci mých projektů.",
+        description: "Stránka na které se právě nacházíte! :). Nejedná se o template, ale o čistý JavaScript, HTML, CSS. Jednoduchá statická stránka s deployment na GitHub Pages pro prezentaci mých projektů.",
         url: "https://github.com/eolybq/PortfolioWeb",
         type: "web"
     },
