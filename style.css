@@ -51,10 +51,12 @@ header {
 }
 
 #profilImg {
-    max-width: 20%;
+    /* max-width: 20%; */
+    width: 200px;
     height: auto;
     border-radius: 20%;
     object-fit: cover;
+    image-rendering: auto;
 }
 
 #links {
