@@ -12,6 +12,34 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 })
 
+
+
+// Dark Mode
+const toggleBtn = document.getElementById("theme-toggle");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+if (prefersDark) {
+    document.body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const dark = document.body.classList.contains("dark-mode");
+    toggleBtn.textContent = dark ? "☀️" : "🌙";
+    localStorage.setItem("theme", dark ? "dark" : "light");
+});
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+    document.body.classList.toggle("dark-mode", savedTheme === "dark");
+    toggleBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+}
+
+
+
+
+
 // Pole s projekty
 const projects = [
     {
