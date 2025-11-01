@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Václav Jež - Portfolio</title>
+    <title data-i18n="pageTitle">Václav Jež - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -12,13 +12,15 @@
 
     <nav>
         <ul>
-            <li><a href="#about">O mně</a></li>
-            <li><a href="#skills">Dovednosti</a></li>
-            <li><a href="#projects">Projekty</a></li>
-            <li><a href="#headerRow">Kontaktujte mě</a></li>
+            <li><a href="#about" data-i18n="navAbout">O mně</a></li>
+            <li><a href="#skills" data-i18n="navSkills">Dovednosti</a></li>
+            <li><a href="#projects" data-i18n="navProjects">Projekty</a></li>
+            <li><a href="#headerRow" data-i18n="navContact">Kontaktujte mě</a></li>
         </ul>
     </nav>
+
     <button id="theme-toggle" aria-label="Přepnout režim">🌙</button>
+    <button id="lang-toggle" aria-label="Přepnout jazyk">EN</button>
 
     <header>
         <div id="headerRow">
@@ -29,13 +31,16 @@
                 <div id="links">
                     <p>Links:</p>
                     <a href="https://github.com/eolybq" target="_blank">
-                        <img src="assets/github.png" alt="GitHub" class="icon"> GitHub
+                        <img src="assets/github.png" alt="GitHub" class="icon">
+                        <span>GitHub</span>
                     </a>
                     <a href="mailto:jez.vasek@gmail.com">
-                        <img src="assets/email.png" alt="Email" class="icon">jez.vasek@gmail.com
-                    <a href="https://www.linkedin.com/in/vaclavjez" target="_blank">
-                        <img src="assets/linkedin.png" alt="LinkedIn" class="icon"> LinkedIn
+                        <img src="assets/email.png" alt="Email" class="icon">
+                        <span>jez.vasek@gmail.com</span>
                     </a>
+                    <a href="https://www.linkedin.com/in/vaclavjez" target="_blank">
+                        <img src="assets/linkedin.png" alt="LinkedIn" class="icon">
+                        <span>LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -43,35 +48,43 @@
     </header>
 
     <section id="about">
-        <h2>O mně</h2>
-        <p>Absolvent bakalářského programu Ekonomie na Masarykově univerzitě, nyní student navazujícího magisterského programu Matematické a statistické metody v ekonomii. Kombinuji praktické zkušenosti ze svých projektů a samostudia s formálním vzděláním. Přináším tak přesah znalostí od ekonomie, podnikové ekonomie, statistiky, ekonometrie po obecné programování, práci s daty a webový vývoj. Jsem nadšený do data science, technologií a pokroku, ve volném čase rád sbírám znalosti z těchto oblastí. Neustále rozšiřuji svoje technické dovednosti a hledám příležitosti k jejich uplatnění v praktických úkolech. Přehled mých hlavních projektů je dostupný níže. Detailnější popis a výsledky projektů spolu s reporty projektů jsou dostupné na GitHubu.</p>
+        <h2 data-i18n="aboutTitle">O mně</h2>
+        <p data-i18n="aboutText">
+            Absolvent bakalářského programu Ekonomie na Masarykově univerzitě, nyní student navazujícího magisterského
+            programu Matematické a statistické metody v ekonomii. Kombinuji praktické zkušenosti ze svých projektů a
+            samostudia s formálním vzděláním. Přináším tak přesah znalostí od ekonomie, podnikové ekonomie, statistiky,
+            ekonometrie po obecné programování, práci s daty a webový vývoj. Jsem nadšený do data science, technologií a
+            pokroku, ve volném čase rád sbírám znalosti z těchto oblastí. Neustále rozšiřuji svoje technické dovednosti
+            a hledám příležitosti k jejich uplatnění v praktických úkolech. Přehled mých hlavních projektů je dostupný
+            níže. Detailnější popis a výsledky projektů spolu s reporty projektů jsou dostupné na GitHubu.
+        </p>
     </section>
 
     <section id="skills">
-        <h2>Dovednosti</h2>
+        <h2 data-i18n="skillsTitle">Dovednosti</h2>
         <ul class="skills-list">
             <li>Python (Pandas, Numpy, Statsmodels, Scikit-learn, TensorFlow)</li>
             <li>R (Tidyverse, ggplot2)</li>
             <li>SQL</li>
-            <li>Statistics (+ Econometrics, Time series models, Bayesian analysis)</li>
+            <li data-i18n="skillsStat">Statistics (+ Econometrics, Time series models, Bayesian analysis)</li>
             <li>Git</li>
             <li>Notion</li>
             <li>JavaScript</li>
             <li>HTML, CSS</li>
-            <li>Linux (- uživatelská znalost)</li>
+            <li data-i18n="skillsLinux">Linux (- uživatelská znalost)</li>
         </ul>
     </section>
 
     <section id="projects">
-        <h2>Projekty</h2>
+        <h2 data-i18n="projectsTitle">Projekty</h2>
         <!-- Projekty se načtou ze script.js -->
     </section>
 
     <footer>
-        &copy; 2025 Václav Jež. Všechna práva vyhrazena.
+        <span data-i18n="footerText">&copy; 2025 Václav Jež. Všechna práva vyhrazena.</span>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>
