@@ -69,22 +69,27 @@ const projects = [
         type: "analysis"
     },
     {
-        // project_title_4: "Webová aplikace pro testování různých modelů s různými hyperparametry",
+        // project_title_4: "RAG LLM ChatBOT pro dokumentaci python knihoven",
+        url: "https://github.com/eolybq/docs_rag_chat_bot",
+        type: ["ml"]
+    },
+    {
+        // project_title_5: "Webová aplikace pro testování různých modelů s různými hyperparametry",
         url: "https://github.com/eolybq/ModelApp",
         type: ["web", "analysis", "ml"]
     },
     {
-        // project_title_5: "Webová aplikace pro správu kalorií a aktivit",
+        // project_title_6: "Webová aplikace pro správu kalorií a aktivit",
         url: "https://github.com/eolybq/FitApp",
         type: "web"
     },
     {
-        // project_title_6: "Webová stránka pro živý chat s využitím WebSocketů",
+        // project_title_7: "Webová stránka pro živý chat s využitím WebSocketů",
         url: "https://github.com/eolybq/ChatApp",
         type: "web"
     },
     {
-        // project_title_7: "Webová stránka pro portfolio",
+        // project_title_8: "Webová stránka pro portfolio",
         url: "https://github.com/eolybq/PortfolioWeb",
         type: "web"
     },
